@@ -3,9 +3,12 @@
   height: 6rem;
   grid-column: 1/-1;
   grid-row: 1/ 2;
-  width: 60vw;
+  width: 70vw;
   display: grid;
   z-index: 100;
+  grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+  align-content: center;
+  align-items: center;
 }
 
 .menu {
@@ -13,9 +16,13 @@
   display: grid;
   align-content: center;
 
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(9, minmax(min-content, max-content));
+
   grid-gap: 1rem;
   align-items: center;
+  &__heading {
+    margin-left: 10rem;
+  }
 
   &__link:link,
   &__link:visited {
@@ -36,4 +43,11 @@
     background-color: rgba(#fff, 0.05);
     transform: translateY(-3px);
   }
+}
+
+.ru-eng {
+  justify-self: end;
+  margin-right: 5rem;
+  border: 1px #fff solid;
+  padding: 3px;
 }

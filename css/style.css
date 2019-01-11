@@ -14,14 +14,14 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6d5d4b;
+  color: #fff;
   font-weight: 300;
   line-height: 1.6; }
 
 .container {
   display: grid;
   grid-template-columns: 6rem 1fr;
-  grid-template-rows: 6rem repeat(8, min-content) 6rem; }
+  grid-template-rows: 6rem repeat(9, min-content) 6rem; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -89,7 +89,7 @@ body {
 .sidebar {
   background-color: #010203;
   grid-column: 1 / 2;
-  grid-row: 1/ -1;
+  grid-row: 1/ 11;
   display: flex;
   justify-content: center; }
   @media only screen and (max-width: 62.5em) {
@@ -104,7 +104,7 @@ body {
   border-radius: 0;
   background-color: #fff;
   height: 2px;
-  width: 4.5rem;
+  width: 3.5rem;
   margin-top: 4rem; }
   @media only screen and (max-width: 62.5em) {
     .nav-btn {
@@ -113,7 +113,7 @@ body {
   .nav-btn::before, .nav-btn::after {
     background-color: #fff;
     height: 2px;
-    width: 4.5rem;
+    width: 3.5rem;
     content: "";
     display: block; }
   .nav-btn::before {
@@ -126,17 +126,22 @@ body {
   height: 6rem;
   grid-column: 1/-1;
   grid-row: 1/ 2;
-  width: 60vw;
+  width: 70vw;
   display: grid;
-  z-index: 100; }
+  z-index: 100;
+  grid-template-columns: repeat(2, minmax(min-content, max-content)) 1fr;
+  align-content: center;
+  align-items: center; }
 
 .menu {
   list-style: none;
   display: grid;
   align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(9, minmax(min-content, max-content));
   grid-gap: 1rem;
   align-items: center; }
+  .menu__heading {
+    margin-left: 10rem; }
   .menu__link:link, .menu__link:visited {
     font-size: 1.2rem;
     color: #fff;
@@ -150,6 +155,12 @@ body {
   .menu__link:hover, .menu__link:active {
     background-color: rgba(255, 255, 255, 0.05);
     transform: translateY(-3px); }
+
+.ru-eng {
+  justify-self: end;
+  margin-right: 5rem;
+  border: 1px #fff solid;
+  padding: 3px; }
 
 .home {
   background-color: #444;

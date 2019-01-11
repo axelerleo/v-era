@@ -39,7 +39,7 @@ html {
 
 body {
   font-family: $font-primary;
-  color: $color-grey-dark-2;
+  color: #fff;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -47,5 +47,5 @@ body {
 .container {
   display: grid;
   grid-template-columns: 6rem 1fr;
-  grid-template-rows: 6rem repeat(8, min-content) 6rem;
+  grid-template-rows: 6rem repeat(9, min-content) 6rem;
 }
