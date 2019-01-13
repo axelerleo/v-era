@@ -1,6 +1,20 @@
 .about {
-  background-color: #232355;
   grid-row: 3/4;
   grid-column: 2/3;
-  height: 100vh;
+
+  &__header {
+    background-image: url(/img/about__img.jpg);
+    background-size: cover;
+    height: 40vh;
+  }
+  &__img {
+    width: 84rem;
+    height: 55vh;
+    padding: 5rem;
+  }
+}
+.about-container {
+  display: flex;
+  height: 60vh;
+  align-items: center;
 }

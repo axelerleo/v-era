@@ -49,3 +49,11 @@ body {
   grid-template-columns: 6rem 1fr;
   grid-template-rows: 6rem repeat(9, min-content) 6rem;
 }
+
+.parallax {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}

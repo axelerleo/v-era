@@ -1,7 +1,7 @@
 .header {
   background-color: $color-secondary;
   height: 6rem;
-  grid-column: 1/-1;
+  grid-column: 2/-1;
   grid-row: 1/ 2;
   width: 70vw;
   display: grid;
@@ -15,13 +15,13 @@
   list-style: none;
   display: grid;
   align-content: center;
-
+  margin-left: 10rem;
   grid-template-columns: repeat(9, minmax(min-content, max-content));
 
   grid-gap: 1rem;
   align-items: center;
   &__heading {
-    margin-left: 10rem;
+    margin-left: 5rem;
   }
 
   &__link:link,
@@ -48,6 +48,6 @@
 .ru-eng {
   justify-self: end;
   margin-right: 5rem;
-  border: 1px #fff solid;
+  border: 1px #333 solid;
   padding: 3px;
 }
