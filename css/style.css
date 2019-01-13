@@ -216,6 +216,7 @@ body {
     display: grid;
     margin: 5rem auto;
     width: 60%;
+    height: 60vh;
     justify-content: center;
     grid-gap: 5rem;
     grid-template-columns: 1fr 1fr;
