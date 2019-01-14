@@ -48,7 +48,7 @@ body {
     color: #54483a; }
 
 .heading-3 {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   text-transform: uppercase; }
 
 .heading-4 {
@@ -284,10 +284,16 @@ body {
     z-index: 3; }
 
 .portfolio {
-  background-color: #235678;
   grid-row: 5/6;
   grid-column: 2/3;
-  height: 100vh; }
+  width: 100vw; }
+  .portfolio__header {
+    background-image: url(../img/portfolio__img.jpg);
+    background-size: cover;
+    height: 40vh; }
+  .portfolio__slider img {
+    width: 33vw;
+    height: 50vh; }
 
 .download {
   background-color: #229933;
