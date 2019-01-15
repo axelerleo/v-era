@@ -1,6 +1,17 @@
 .partners {
-  background-color: #553399;
   grid-row: 8/9;
   grid-column: 2/3;
-  height: 100vh;
+  &__header {
+    background-image: url(../img/partners__img.jpg);
+    background-size: cover;
+    height: 40vh;
+  }
+  &__container {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, 20rem);
+    grid-gap: 5rem;
+  }
 }

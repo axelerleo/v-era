@@ -89,6 +89,18 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
+.mt-sm {
+  margin-top: 2rem; }
+
+.mt-md {
+  margin-top: 3rem; }
+
+.mt-lg {
+  margin-top: 4rem; }
+
+.mt-hg {
+  margin-top: 8rem; }
+
 .bs-1 {
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
 
@@ -296,16 +308,27 @@ body {
     height: 50vh; }
 
 .download {
-  background-color: #229933;
   grid-row: 7/8;
-  grid-column: 2/3;
-  height: 100vh; }
+  grid-column: 2/3; }
+  .download__header {
+    background-image: url(../img/download__img.jpg);
+    background-size: cover;
+    height: 40vh; }
 
 .partners {
-  background-color: #553399;
   grid-row: 8/9;
-  grid-column: 2/3;
-  height: 100vh; }
+  grid-column: 2/3; }
+  .partners__header {
+    background-image: url(../img/partners__img.jpg);
+    background-size: cover;
+    height: 40vh; }
+  .partners__container {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, 20rem);
+    grid-gap: 5rem; }
 
 .contacts {
   background-color: #99ff21;
