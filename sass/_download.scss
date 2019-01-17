@@ -1,9 +1,7 @@
 .download {
   grid-row: 7/8;
-  grid-column: 2/3;
+  grid-column: 1/3;
   &__header {
-    background-image: url(../img/download__img.jpg);
-    background-size: cover;
     height: 40vh;
   }
 }
