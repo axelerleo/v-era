@@ -44,3 +44,38 @@
     transform: translateY(1.3rem);
   }
 }
+
+/* begin Up-Down button  */
+
+.up_down_btn {
+  position: fixed;
+  bottom: 8rem;
+  left: 1.5rem;
+  z-index: 9999;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 30px;
+  background: #f5f5f5;
+  color: #444;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+}
+
+.up_down_btn:hover {
+  text-decoration: none;
+  background: #e9ebec;
+}
+
+.up_down_btn-show {
+  display: block;
+}
+
+.up_down_btn-disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+}
+
+/* end Up-Down button  */
