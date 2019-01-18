@@ -7,10 +7,20 @@
   }
 
   &__slider img {
-    width: calc(33vw - 8rem);
+    //width: calc(33vw - 8rem);
     height: 45vh;
+    margin: 0 5px;
+  }
+  &__youtube {
+    //width: calc(33vw - 8rem);
+    height: 45vh;
+    margin: 0 5px;
   }
   &__container {
-    margin: 15rem 10rem;
+    margin: 13rem;
   }
+}
+.slick-arrow {
+  background-color: black;
+  color: red;
 }

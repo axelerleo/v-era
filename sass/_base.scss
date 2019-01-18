@@ -84,6 +84,7 @@ body {
   color: white;
   font-weight: 400;
 }
+
 .img-parallax {
   width: 100vmax;
   z-index: -1;
@@ -92,6 +93,8 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   pointer-events: none;
+
+  filter: brightness(65%);
 }
 
 .text-parallax {

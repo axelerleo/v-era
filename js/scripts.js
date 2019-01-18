@@ -1,7 +1,19 @@
 $(".portfolio__slider").slick({
-  infinite: true,
+  // infinite: true,
   slidesToShow: 3,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  // dots: true
+
+  infinite: true,
+  speed: 300,
+
+  variableWidth: true
+});
+
+$(".home__slider").slick({
+  dots: true,
+  arrows: false,
+  fade: true
 });
 
 $(".main-parallax").each(function() {
