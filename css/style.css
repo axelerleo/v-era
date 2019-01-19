@@ -500,6 +500,12 @@ body {
   background-color: black;
   color: red; }
 
+#exteriors,
+#interiors,
+#animation,
+#interactive {
+  transform: translateY(-28.5vh); }
+
 .download {
   grid-row: 7/8;
   grid-column: 1/3; }
@@ -535,6 +541,7 @@ body {
     grid-template-columns: 12rem 1fr;
     grid-template-rows: repeat(3, 12rem);
     margin: 10rem auto;
+    grid-gap: 2rem;
     align-items: center; }
   .contacts__icon {
     grid-column: 1/2;
