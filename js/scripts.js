@@ -58,12 +58,19 @@ $(".main-parallax").each(function() {
   "use strict";
 
   var upDownBtn = document.querySelector(".up_down_btn");
+  var arrowsBlock = document.querySelector(".home__arrows");
   var check;
   var coordsY = 0;
 
   function trackScroll() {
     var scrolled = window.pageYOffset;
     var coords = document.documentElement.clientHeight;
+
+    if (scrolled > 0) {
+      arrowsBlock.classList.add("home__arrows--invisible");
+    } else {
+      arrowsBlock.classList.remove("home__arrows--invisible");
+    }
 
     if (scrolled > coords) {
       upDownBtn.classList.add("up_down_btn-show");

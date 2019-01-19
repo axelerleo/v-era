@@ -56,4 +56,76 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  &__arrows {
+    width: 10rem;
+    height: 6rem;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    z-index: 101;
+    justify-self: center;
+    align-self: end;
+    // position: absolute;
+    // left: 50%;
+    // margin-left: -3rem;
+    // bottom: 2rem;
+    opacity: 0.7;
+
+    &--invisible {
+      display: none;
+    }
+  }
+
+  &__arrows path {
+    stroke: #fff;
+    fill: transparent;
+    stroke-width: 2px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite;
+  }
+
+  @keyframes arrow {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes arrow /*Safari and Chrome*/ {
+    0% {
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  &__arrows path.a1 {
+    animation-delay: -1s;
+    -webkit-animation-delay: -1s; /* Safari 和 Chrome */
+  }
+
+  &__arrows path.a2 {
+    animation-delay: -0.5s;
+    -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
+  }
+
+  &__arrows path.a3 {
+    animation-delay: 0s;
+    -webkit-animation-delay: 0s; /* Safari 和 Chrome */
+  }
 }
