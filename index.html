@@ -17,18 +17,36 @@
 
   <body class="container">
     <nav class="sidebar">
-      СоцСети <a class="up_down_btn" title="Наверх">&uarr;</a>
+      СоцСети
+      <a class="up_down_btn" title="Наверх">
+        <svg class="sidebar__arrows">
+          <path class="a1" d="M0 0 L50 32 L100 0"></path>
+        </svg>
+        
+      </a>
     </nav>
 
     <header class="header">
       <ul class="menu">
         <li class="menu__item"><a href="#" class="menu__link">Домашняя</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Скачать</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Партнеры</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        <li class="menu__item">
+          <a href="#anchor-about" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-services" class="menu__link">Услуги</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-portfolio" class="menu__link">Портфолио</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-download" class="menu__link">Скачать</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-partners" class="menu__link">Партнеры</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-contacts" class="menu__link">Контакты</a>
+        </li>
       </ul>
       <h2 class="menu__heading heading-2">Visualisation Era</h2>
       <div class="ru-eng">ru-eng</div>
@@ -38,7 +56,11 @@
       <div class="home__slider">
         <div><img src="img/interiors03.jpg" alt="" /></div>
         <div><img src="img/interiors04.jpg" alt="" /></div>
-        <div><img src="img/interiors07.jpg" alt="" /></div>
+        <div><img src="img/Arbat_c9_cc.jpg" alt="" /></div>
+        <div><img src="img/Laz_01.jpg" alt="" /></div>
+        <div><img src="img/Ver_01.jpg" alt="" /></div>
+        <div><img src="img/park_G_02.jpg" alt="" /></div>
+        <div><img src="img/about__img.jpg" alt="" /></div>
       </div>
       <div class="home__header">
         <h2 class="heading-2">V ERA STUDIO</h2>
@@ -50,7 +72,7 @@
         <!-- <path class="a3" d="M0 40 L50 72 L100 40"></path> -->
       </svg>
     </section>
-    <section class="about">
+    <section class="about" id="anchor-about">
       <div class="parallax about__header">
         <div class="block">
           <img
@@ -80,7 +102,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section class="services" id="anchor-services">
       <div class="parallax services__header">
         <div class="block">
           <img
@@ -165,7 +187,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="anchor-portfolio">
       <div class="parallax about__header">
         <div class="block">
           <img
@@ -181,10 +203,10 @@
       <div class="portfolio__container">
         <h2 class="heading-2 black mb-md mt-md">Экстерьеры</h2>
         <div class="portfolio__slider">
-          <div><img src="img/park_G_01.jpg" alt="" /></div>
+          <div><img src="img/Arbat_c4_cc.jpg" alt="" /></div>
           <div><img src="img/park_G_02.jpg" alt="" /></div>
           <div><img src="img/exteriors.jpg" alt="" /></div>
-          <div><img src="img/park_G_01.jpg" alt="" /></div>
+          <div><img src="img/Arbat_c9_cc.jpg" alt="" /></div>
           <div><img src="img/park_G_02.jpg" alt="" /></div>
           <div><img src="img/exteriors.jpg" alt="" /></div>
         </div>
@@ -248,7 +270,7 @@
         </div>
       </div>
     </section>
-    <section class="download">
+    <section class="download" id="anchor-download">
       <div class="parallax download__header">
         <div class="block">
           <img
@@ -263,7 +285,7 @@
       </div>
       Скачать ПДФ!
     </section>
-    <section class="partners">
+    <section class="partners" id="anchor-partners">
       <div class="parallax partners__header">
         <div class="block">
           <img
@@ -315,17 +337,72 @@
         </div>
       </div>
     </section>
-    <section class="contacts">Контакты</section>
+    <section class="contacts" id="anchor-contacts">
+      <div class="parallax contacts__header">
+        <div class="block">
+          <img
+            src="./img/contacts__img.jpg"
+            data-speed="1"
+            class="img-parallax main-parallax"
+          />
+          <h3 data-speed="-2" class="heading-3 text-parallax main-parallax">
+            Контакты
+          </h3>
+        </div>
+      </div>
+      <div class="contacts__container">
+        <object
+          class="contacts__icon"
+          name="graph"
+          type="image/svg+xml"
+          data="/svg/skype.svg"
+          width="100%"
+          height="100%"
+        ></object>
+
+        <p class="contacts__info black">mail@v.era.com</p>
+        <object
+          class="contacts__icon"
+          name="graph"
+          type="image/svg+xml"
+          data="/svg/skype.svg"
+          width="100%"
+          height="100%"
+        ></object>
+        <p class="contacts__info black">+7 961 52 72 342</p>
+        <object
+          class="contacts__icon"
+          name="graph"
+          type="image/svg+xml"
+          data="/svg/skype.svg"
+          width="100%"
+          height="100%"
+        ></object>
+        <p class="contacts__info black">V.era-Studio</p>
+      </div>
+    </section>
 
     <footer class="footer">
       <ul class="menu">
         <li class="menu__item"><a href="#" class="menu__link">Домашняя</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Услуги</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Скачать</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Партнеры</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+        <li class="menu__item">
+          <a href="#anchor-about" class="menu__link">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-services" class="menu__link">Услуги</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-portfolio" class="menu__link">Портфолио</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-download" class="menu__link">Скачать</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-partners" class="menu__link">Партнеры</a>
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-contacts" class="menu__link">Контакты</a>
+        </li>
       </ul>
     </footer>
     <p class="copyright">&copy; Copyright by Alexey Leonov, 2019</p>

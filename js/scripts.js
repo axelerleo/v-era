@@ -13,7 +13,13 @@ $(".portfolio__slider").slick({
 $(".home__slider").slick({
   dots: true,
   arrows: false,
-  fade: true
+  fade: true,
+  infinite: true,
+  speed: 600,
+  autoplay: true,
+  autoplaySpeed: 10000,
+  pauseOnFocus: false,
+  pauseOnHover: false
 });
 
 $(".main-parallax").each(function() {
@@ -74,12 +80,18 @@ $(".main-parallax").each(function() {
 
     if (scrolled > coords) {
       upDownBtn.classList.add("up_down_btn-show");
-      upDownBtn.innerHTML = "&uarr;";
+      upDownBtn.innerHTML = `<svg class="sidebar__arrows">
+      
+      <path class="a1" d="M0 20 L25 0 L50 20"></path>
+    </svg>`;
       upDownBtn.setAttribute("title", "Наверх");
       check = false;
     }
     if (scrolled === 0) {
-      upDownBtn.innerHTML = "&darr;";
+      upDownBtn.innerHTML = `<svg class="sidebar__arrows">
+      <path class="a1" d="M0 0 L25 20 L50 0"></path>
+      
+    </svg>`;
       upDownBtn.setAttribute("title", "Вниз");
       check = true;
     }
@@ -92,7 +104,7 @@ $(".main-parallax").each(function() {
       coordsY = pageYOffset;
       (function goTop() {
         if (window.pageYOffset !== 0) {
-          window.scrollBy(0, -30);
+          window.scrollBy(0, -40);
           setTimeout(goTop, 0);
         } else {
           upDownBtn.classList.remove("up_down_btn-disabled");
@@ -102,10 +114,9 @@ $(".main-parallax").each(function() {
     } else if (check) {
       (function goBottom() {
         var match = Math.ceil(Math.min(coordsY, pageYOffset));
-        console.log("coordsY " + coordsY);
-        console.log("current " + match);
+
         if (match < coordsY) {
-          window.scrollBy(0, Math.min(coordsY - match, 30));
+          window.scrollBy(0, Math.min(coordsY - match, 40));
           setTimeout(goBottom, 0);
         } else {
           upDownBtn.classList.remove("up_down_btn-disabled");
@@ -119,3 +130,24 @@ $(".main-parallax").each(function() {
   upDownBtn.addEventListener("click", backToTop);
 })();
 /* end Up-Down button  */
+
+//anchor links smooth scroll
+
+$(function() {
+  $("a[href*=#]").click(function() {
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      var $target = $(this.hash);
+      $target =
+        ($target.length && $target) || $("[name=" + this.hash.slice(1) + "]");
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $("html,body").animate({ scrollTop: targetOffset }, 100); //скорость прокрутки
+        return false;
+      }
+    }
+  });
+});

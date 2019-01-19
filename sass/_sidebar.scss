@@ -47,16 +47,32 @@
 
 /* begin Up-Down button  */
 
+.sidebar__arrows {
+  width: 5rem;
+  height: 4rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -2.5rem;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+.sidebar__arrows path {
+  stroke: #fff;
+  fill: transparent;
+  stroke-width: 2px;
+}
+
 .up_down_btn {
   position: fixed;
   bottom: 8rem;
-  left: 1rem;
+
   z-index: 9999;
-  width: 4rem;
+  width: 5rem;
   height: 4rem;
   text-align: center;
   line-height: 4rem;
-  background: #f5f5f5;
+  //background: #f5f5f5;
   color: #444;
   cursor: pointer;
   border-radius: 2px;
@@ -66,7 +82,7 @@
 
 .up_down_btn:hover {
   text-decoration: none;
-  background: #e9ebec;
+  //background: #e9ebec;
 }
 
 .up_down_btn-show {
