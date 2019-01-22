@@ -115,3 +115,56 @@ body {
 .contacts {
   width: 100%;
 }
+
+.modal {
+  z-index: 500;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top:0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+
+  &__exteriors, &__interiors{
+    display: none;
+    width: 90vw;
+    height: 90vh;
+  }
+  &__img {
+    width: 90vw;
+    height: 90vh;
+    object-fit: cover;
+  }
+  &__cross {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    fill: #aaa;
+    cursor: pointer;
+    z-index: 600;
+
+    &:hover{
+      fill: #ddd;
+
+    }
+ }
+}
+#modal__exteriors, #modal__interiors{
+  visibility: hidden;
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+
+}
+
+.modal.active{
+  display: block;
+}
+#modal__exteriors.active, #modal__interiors.active {
+  visibility:visible;
+}

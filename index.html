@@ -188,7 +188,7 @@
       </div>
     </section>
     <section class="portfolio" id="anchor-portfolio">
-      <div class="parallax about__header">
+      <div class="parallax portfolio__header">
         <div class="block">
           <img
             src="./img/portfolio__img.jpg"
@@ -200,28 +200,85 @@
           </h3>
         </div>
       </div>
+
+      <!-- Modals -->
+      <div class="modal">
+          <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <!-- exteriors -->
+        <div class="modal__exteriors" id ="modal__exteriors">
+          <div><img class="modal__img" src="img/Arbat_c4_cc.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/park_G_02.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/exteriors.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/Arbat_c9_cc.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/park_G_02.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/exteriors.jpg" alt="" /></div>
+        </div>
+        <!-- interiors -->
+        <div class="modal__interiors" id = "modal__interiors">
+          <div><img class="modal__img" src="img/interiors.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors01.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors02.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors03.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors04.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors05.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors06.jpg" alt="" /></div>
+          <div><img class="modal__img" src="img/interiors07.jpg" alt="" /></div>
+        </div>
+      </div>
+
+      <!-- animation -->
+      <!-- interactive -->
       <div class="portfolio__container">
         <h2 class="heading-2 black mb-md mt-md">Экстерьеры</h2>
         <div id="exteriors"></div>
         <div class="portfolio__slider">
-          <div><img src="img/Arbat_c4_cc.jpg" alt="" /></div>
-          <div><img src="img/park_G_02.jpg" alt="" /></div>
-          <div><img src="img/exteriors.jpg" alt="" /></div>
-          <div><img src="img/Arbat_c9_cc.jpg" alt="" /></div>
-          <div><img src="img/park_G_02.jpg" alt="" /></div>
-          <div><img src="img/exteriors.jpg" alt="" /></div>
+          <div class="portfolio-preview" data-modal="0" class-modal="exteriors">
+            <img src="img/Arbat_c4_cc.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="1" class-modal="exteriors">
+            <img src="img/park_G_02.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="2" class-modal="exteriors">
+            <img src="img/exteriors.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="3" class-modal="exteriors">
+            <img src="img/Arbat_c9_cc.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="4" class-modal="exteriors">
+            <img src="img/park_G_02.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="5" class-modal="exteriors">
+            <img src="img/exteriors.jpg" alt="" />
+          </div>
         </div>
+
         <h2 class="heading-2 black mb-md mt-md">Интерьеры</h2>
         <div id="interiors"></div>
         <div class="portfolio__slider">
-          <div><img src="img/interiors.jpg" alt="" /></div>
-          <div><img src="img/interiors01.jpg" alt="" /></div>
-          <div><img src="img/interiors02.jpg" alt="" /></div>
-          <div><img src="img/interiors03.jpg" alt="" /></div>
-          <div><img src="img/interiors04.jpg" alt="" /></div>
-          <div><img src="img/interiors05.jpg" alt="" /></div>
-          <div><img src="img/interiors06.jpg" alt="" /></div>
-          <div><img src="img/interiors07.jpg" alt="" /></div>
+          <div class="portfolio-preview" data-modal="0" class-modal="interiors">
+            <img src="img/interiors.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="1" class-modal="interiors">
+            <img src="img/interiors01.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="2" class-modal="interiors">
+            <img src="img/interiors02.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="3" class-modal="interiors">
+            <img src="img/interiors03.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="4" class-modal="interiors">
+            <img src="img/interiors04.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="5" class-modal="interiors">
+            <img src="img/interiors05.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="6" class-modal="interiors">
+            <img src="img/interiors06.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="7" class-modal="interiors">
+            <img src="img/interiors07.jpg" alt="" />
+          </div>
         </div>
         <h2 class="heading-2 black mb-md mt-md">Анимация</h2>
         <div id="animation"></div>

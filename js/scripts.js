@@ -22,6 +22,24 @@ $(".home__slider").slick({
   pauseOnHover: false
 });
 
+$("#modal__exteriors").slick({
+  // arrows: false,
+  fade: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+$("#modal__interiors").slick({
+  // arrows: false,
+  fade: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
 $(".main-parallax").each(function() {
   let img = $(this);
   let imgParent = $(this).parent();
@@ -128,6 +146,62 @@ $(".main-parallax").each(function() {
 
   window.addEventListener("scroll", trackScroll);
   upDownBtn.addEventListener("click", backToTop);
+
+  let portfolioPreviewImages = document.querySelectorAll(".portfolio-preview"),
+    index,
+    image;
+
+  for (index = 0; index < portfolioPreviewImages.length; index++) {
+    image = portfolioPreviewImages[index];
+    image.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(event) {
+    let modalId = this.getAttribute("data-modal");
+    let modalClass = this.getAttribute("class-modal");
+    let modalContainer = document.querySelector(".modal");
+    let slickTrack = document.querySelector("#modal__" + modalClass +" .slick-track");
+    console.log(slickTrack);
+    slickTrack.setAttribute("style", "opacity: 1; width: 10000px;");
+    event.preventDefault();
+    let modalSlider = $("#modal__" + modalClass);
+    
+
+    modalContainer.classList.add('active');
+    modalSlider[0].classList.add('active');
+    
+    modalSlider.slick("slickGoTo", modalId, true);
+    
+  }
+
+  let closeBtn = document.querySelector('.js-modal-close');
+
+  closeBtn.addEventListener('click', function(e) {
+    let modalContainer = document.querySelector(".modal.active");
+    let modalExteriors = $("#modal__exteriors");
+    let modalInteriors = $("#modal__interiors");
+    
+    modalContainer.classList.remove('active');
+    modalExteriors[0].classList.remove('active');
+    modalInteriors[0].classList.remove('active');
+    
+ });
+
+ document.body.addEventListener('keyup', function (e) {
+  var key = e.keyCode;
+
+  if (key == 27) {
+
+    let modalContainer = document.querySelector(".modal.active");
+    let modalExteriors = $("#modal__exteriors");
+    let modalInteriors = $("#modal__interiors");
+    
+    modalContainer.classList.remove('active');
+    modalExteriors[0].classList.remove('active');
+    modalInteriors[0].classList.remove('active');
+  };
+}, false);
+
 })();
 /* end Up-Down button  */
 
