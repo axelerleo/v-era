@@ -121,13 +121,17 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top:0;
+  top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
 
-  &__exteriors, &__interiors{
-    display: none;
+  &__exteriors,
+  &__interiors {
+    // display: none;
     width: 90vw;
     height: 90vh;
   }
@@ -146,25 +150,28 @@ body {
     cursor: pointer;
     z-index: 600;
 
-    &:hover{
+    &:hover {
       fill: #ddd;
-
     }
- }
+  }
 }
-#modal__exteriors, #modal__interiors{
+#modal__exteriors,
+#modal__interiors {
   visibility: hidden;
   width: 90vw;
   height: 90vh;
   position: absolute;
   top: 5vh;
   left: 5vw;
-
 }
 
-.modal.active{
-  display: block;
+.modal.active {
+  // display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s;
 }
-#modal__exteriors.active, #modal__interiors.active {
-  visibility:visible;
+#modal__exteriors.active,
+#modal__interiors.active {
+  visibility: visible;
 }

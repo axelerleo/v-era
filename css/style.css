@@ -91,9 +91,10 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: none; }
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s; }
   .modal__exteriors, .modal__interiors {
-    display: none;
     width: 90vw;
     height: 90vh; }
   .modal__img {
@@ -112,7 +113,8 @@ body {
     .modal__cross:hover {
       fill: #ddd; }
 
-#modal__exteriors, #modal__interiors {
+#modal__exteriors,
+#modal__interiors {
   visibility: hidden;
   width: 90vw;
   height: 90vh;
@@ -121,9 +123,12 @@ body {
   left: 5vw; }
 
 .modal.active {
-  display: block; }
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s; }
 
-#modal__exteriors.active, #modal__interiors.active {
+#modal__exteriors.active,
+#modal__interiors.active {
   visibility: visible; }
 
 .heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
