@@ -45,6 +45,8 @@ $(".main-parallax").each(function() {
   let imgParent = $(this).parent();
   function parallaxImg() {
     let speed = img.data("speed");
+    let coords = img.data("coords") || 50;
+
     let imgY = imgParent.offset().top;
     let winY = $(this).scrollTop();
     let winH = $(this).height();
@@ -60,7 +62,7 @@ $(".main-parallax").each(function() {
       // Max number of pixels until block disappear
       var imgTop = winH + parentH;
       // Porcentage between start showing until disappearing
-      var imgPercent = (imgBottom / imgTop) * 100 + (50 - speed * 50);
+      var imgPercent = (imgBottom / imgTop) * 100 + (coords - speed * 50);
     }
     img.css({
       top: imgPercent + "%",
@@ -153,55 +155,98 @@ $(".main-parallax").each(function() {
 
   for (index = 0; index < portfolioPreviewImages.length; index++) {
     image = portfolioPreviewImages[index];
-    image.addEventListener("click", clickHandler);
+    // image.addEventListener("click", clickHandler);
+
+    let flag = 0;
+    image.addEventListener(
+      "mousedown",
+      function() {
+        flag = 0;
+      },
+      false
+    );
+    image.addEventListener(
+      "mousemove",
+      function() {
+        flag = 1;
+      },
+      false
+    );
+    image.addEventListener(
+      "mouseup",
+      function(event) {
+        if (flag === 0) {
+          // console.log("click");
+          let modalId = this.getAttribute("data-modal");
+          let modalClass = this.getAttribute("class-modal");
+          let modalContainer = document.querySelector(".modal");
+          let slickTrack = document.querySelector(
+            "#modal__" + modalClass + " .slick-track"
+          );
+
+          slickTrack.setAttribute("style", "opacity: 1; width: 10000px;");
+          event.preventDefault();
+          let modalSlider = $("#modal__" + modalClass);
+
+          modalContainer.classList.add("active");
+          modalSlider[0].classList.add("active");
+
+          modalSlider.slick("slickGoTo", modalId, true);
+        } else if (flag === 1) {
+          // console.log("drag");
+        }
+      },
+      false
+    );
   }
 
   function clickHandler(event) {
     let modalId = this.getAttribute("data-modal");
     let modalClass = this.getAttribute("class-modal");
     let modalContainer = document.querySelector(".modal");
-    let slickTrack = document.querySelector("#modal__" + modalClass +" .slick-track");
-    console.log(slickTrack);
+    let slickTrack = document.querySelector(
+      "#modal__" + modalClass + " .slick-track"
+    );
+
     slickTrack.setAttribute("style", "opacity: 1; width: 10000px;");
     event.preventDefault();
     let modalSlider = $("#modal__" + modalClass);
-    
 
-    modalContainer.classList.add('active');
-    modalSlider[0].classList.add('active');
-    
+    modalContainer.classList.add("active");
+    modalSlider[0].classList.add("active");
+
     modalSlider.slick("slickGoTo", modalId, true);
-    
   }
 
-  let closeBtn = document.querySelector('.js-modal-close');
+  let closeBtn = document.querySelector(".js-modal-close");
 
-  closeBtn.addEventListener('click', function(e) {
+  closeBtn.addEventListener("click", function(e) {
     let modalContainer = document.querySelector(".modal.active");
     let modalExteriors = $("#modal__exteriors");
     let modalInteriors = $("#modal__interiors");
-    
-    modalContainer.classList.remove('active');
-    modalExteriors[0].classList.remove('active');
-    modalInteriors[0].classList.remove('active');
-    
- });
 
- document.body.addEventListener('keyup', function (e) {
-  var key = e.keyCode;
+    modalContainer.classList.remove("active");
+    modalExteriors[0].classList.remove("active");
+    modalInteriors[0].classList.remove("active");
+  });
 
-  if (key == 27) {
+  document.body.addEventListener(
+    "keyup",
+    function(e) {
+      var key = e.keyCode;
 
-    let modalContainer = document.querySelector(".modal.active");
-    let modalExteriors = $("#modal__exteriors");
-    let modalInteriors = $("#modal__interiors");
-    
-    modalContainer.classList.remove('active');
-    modalExteriors[0].classList.remove('active');
-    modalInteriors[0].classList.remove('active');
-  };
-}, false);
+      if (key == 27) {
+        let modalContainer = document.querySelector(".modal.active");
+        let modalExteriors = $("#modal__exteriors");
+        let modalInteriors = $("#modal__interiors");
 
+        modalContainer.classList.remove("active");
+        modalExteriors[0].classList.remove("active");
+        modalInteriors[0].classList.remove("active");
+      }
+    },
+    false
+  );
 })();
 /* end Up-Down button  */
 
@@ -224,4 +269,9 @@ $(function() {
       }
     }
   });
+});
+
+$(".lang-btn").on("click", function() {
+  $(".lang-btn").removeClass("border");
+  $(this).addClass("border");
 });

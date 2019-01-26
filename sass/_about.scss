@@ -6,13 +6,15 @@
     height: 40vh;
   }
   &__img {
-    width: 84rem;
-    height: 55vh;
-    padding: 5rem;
+    width: auto;
+    height: 50vh;
+    margin-left: 13rem;
+    margin-right: 6rem;
+    object-fit: cover;
   }
 }
 .about-container {
   display: flex;
-  height: 60vh;
+  height: 65vh;
   align-items: center;
 }

@@ -47,18 +47,27 @@
         </li>
       </ul>
       <h2 class="menu__heading heading-2">Visualisation Era</h2>
-      <div class="ru-eng">ru-eng</div>
+      <div class="ru-eng">
+        <label for="english" class="lang-btn" id="english-btn">Eng</label>
+        <input type="radio" name="lang" id="english" />
+        <label for="rus" class="lang-btn" id="rus-btn">Rus</label>
+        <input type="radio" name="lang" id="rus" checked />
+      </div>
     </header>
 
     <section class="home">
       <div class="home__slider">
-        <div><img src="img/interiors03.jpg" alt="" /></div>
-        <div><img src="img/interiors04.jpg" alt="" /></div>
-        <div><img src="img/Arbat_c9_cc.jpg" alt="" /></div>
-        <div><img src="img/Laz_01.jpg" alt="" /></div>
-        <div><img src="img/Ver_01.jpg" alt="" /></div>
-        <div><img src="img/park_G_02.jpg" alt="" /></div>
-        <div><img src="img/about__img.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors1.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors2.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors3.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors4.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors5.jpg" alt="" /></div>
+        <div><img src="img/exteriors/min/exteriors6.jpg" alt="" /></div>
+        <div><img src="img/interiors/min/interiors1.jpg" alt="" /></div>
+        <div><img src="img/interiors/min/interiors2.jpg" alt="" /></div>
+        <div><img src="img/interiors/min/interiors3.jpg" alt="" /></div>
+        <div><img src="img/interiors/min/interiors4.jpg" alt="" /></div>
+        <div><img src="img/interiors/min/interiors5.jpg" alt="" /></div>
       </div>
       <div class="home__header">
         <h2 class="heading-2">V ERA STUDIO</h2>
@@ -74,7 +83,7 @@
       <div class="parallax about__header">
         <div class="block">
           <img
-            src="./img/about__img.jpg"
+            src="./img/sections/min/about.jpg"
             data-speed="1"
             class="img-parallax main-parallax"
           />
@@ -85,7 +94,8 @@
       </div>
 
       <div class="about-container">
-        <img src="img/about__img-content.jpg" alt="" class="about__img" />
+        <img src="img/exteriors/not opt/about__content.jpg"" class="about__img"
+        />
         <div class="about__container-text">
           <p class="about__text black mb-sm">
             Более 6 лет мы занимаемся созданием трехмерного графического
@@ -104,8 +114,9 @@
       <div class="parallax services__header">
         <div class="block">
           <img
-            src="./img/services__img.jpg"
+            src="./img/sections/min/services.jpg"
             data-speed="1"
+            data-coords="100"
             class="img-parallax main-parallax"
           />
           <h3 data-speed="-2" class="heading-3 text-parallax main-parallax">
@@ -117,7 +128,7 @@
       <div class="services__img-container">
         <div class="img-group">
           <img
-            src="./img/interiors.jpg"
+            src="./img/preview/services/min/interiors.jpg"
             alt=""
             class="services__interiors services__img"
           />
@@ -135,11 +146,11 @@
         </div>
         <div class="img-group">
           <img
-            src="./img/exteriors.jpg"
+            src="./img/preview/services/min/exteriors.jpg"
             alt=""
             class="services__exteriors services__img"
           />
-          <div class="img-group__mask">
+          <div href="#exteriors" class="img-group__mask">
             <p>
               Статичные изображения, которые можно использовать в полиграфии, а
               также для оформления сайтов. Мы работаем с частными домами,
@@ -152,7 +163,7 @@
         </div>
         <div class="img-group">
           <img
-            src="./img/animation.jpg"
+            src="./img/preview/services/min/animation.jpg"
             alt=""
             class="services__animation services__img"
           />
@@ -169,7 +180,7 @@
         </div>
         <div class="img-group">
           <img
-            src="./img/interactive.jpg"
+            src="./img/preview/services/min/interactive.jpg"
             alt=""
             class="services__interactive services__img"
           />
@@ -190,7 +201,7 @@
       <div class="parallax portfolio__header">
         <div class="block">
           <img
-            src="./img/portfolio__img.jpg"
+            src="./img/sections/portfolio.jpg"
             data-speed="1"
             class="img-parallax main-parallax"
           />
@@ -202,26 +213,188 @@
 
       <!-- Modals -->
       <div class="modal">
-          <svg class="modal__cross js-modal-close" xmlns="http://www.w3.org/2000/svg"               viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg>
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
         <!-- exteriors -->
-        <div class="modal__exteriors" id ="modal__exteriors">
-          <div><img class="modal__img" src="img/Arbat_c4_cc.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/park_G_02.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/exteriors.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/Arbat_c9_cc.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/park_G_02.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/exteriors.jpg" alt="" /></div>
+        <div class="modal__exteriors" id="modal__exteriors">
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors1.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors2.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors3.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors4.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors5.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors6.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors7.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors8.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors9.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors10.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors11.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors12.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors13.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors14.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/exteriors/min/exteriors15.jpg"
+              alt=""
+            />
+          </div>
         </div>
         <!-- interiors -->
-        <div class="modal__interiors" id = "modal__interiors">
-          <div><img class="modal__img" src="img/interiors.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors01.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors02.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors03.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors04.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors05.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors06.jpg" alt="" /></div>
-          <div><img class="modal__img" src="img/interiors07.jpg" alt="" /></div>
+        <div class="modal__interiors" id="modal__interiors">
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors1.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors2.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors3.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors4.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors5.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors6.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors7.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors8.jpg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="modal__img"
+              src="img/interiors/min/interiors9.jpg"
+              alt=""
+            />
+          </div>
         </div>
       </div>
 
@@ -232,22 +405,69 @@
         <div id="exteriors"></div>
         <div class="portfolio__slider">
           <div class="portfolio-preview" data-modal="0" class-modal="exteriors">
-            <img src="img/Arbat_c4_cc.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors1.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="1" class-modal="exteriors">
-            <img src="img/park_G_02.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors2.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="2" class-modal="exteriors">
-            <img src="img/exteriors.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors3.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="3" class-modal="exteriors">
-            <img src="img/Arbat_c9_cc.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors4.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="4" class-modal="exteriors">
-            <img src="img/park_G_02.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors5.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="5" class-modal="exteriors">
-            <img src="img/exteriors.jpg" alt="" />
+            <img src="img/preview/exteriors/min/exteriors6.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="6" class-modal="exteriors">
+            <img src="img/preview/exteriors/min/exteriors7.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="7" class-modal="exteriors">
+            <img src="img/preview/exteriors/min/exteriors8.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="8" class-modal="exteriors">
+            <img src="img/preview/exteriors/min/exteriors9.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="9" class-modal="exteriors">
+            <img src="img/preview/exteriors/min/exteriors10.jpg" alt="" />
+          </div>
+          <div
+            class="portfolio-preview"
+            data-modal="10"
+            class-modal="exteriors"
+          >
+            <img src="img/preview/exteriors/min/exteriors11.jpg" alt="" />
+          </div>
+          <div
+            class="portfolio-preview"
+            data-modal="11"
+            class-modal="exteriors"
+          >
+            <img src="img/preview/exteriors/min/exteriors12.jpg" alt="" />
+          </div>
+          <div
+            class="portfolio-preview"
+            data-modal="12"
+            class-modal="exteriors"
+          >
+            <img src="img/preview/exteriors/min/exteriors13.jpg" alt="" />
+          </div>
+          <div
+            class="portfolio-preview"
+            data-modal="13"
+            class-modal="exteriors"
+          >
+            <img src="img/preview/exteriors/min/exteriors14.jpg" alt="" />
+          </div>
+          <div
+            class="portfolio-preview"
+            data-modal="14"
+            class-modal="exteriors"
+          >
+            <img src="img/preview/exteriors/min/exteriors15.jpg" alt="" />
           </div>
         </div>
 
@@ -255,28 +475,31 @@
         <div id="interiors"></div>
         <div class="portfolio__slider">
           <div class="portfolio-preview" data-modal="0" class-modal="interiors">
-            <img src="img/interiors.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors1.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="1" class-modal="interiors">
-            <img src="img/interiors01.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors2.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="2" class-modal="interiors">
-            <img src="img/interiors02.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors3.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="3" class-modal="interiors">
-            <img src="img/interiors03.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors4.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="4" class-modal="interiors">
-            <img src="img/interiors04.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors5.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="5" class-modal="interiors">
-            <img src="img/interiors05.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors6.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="6" class-modal="interiors">
-            <img src="img/interiors06.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors7.jpg" alt="" />
           </div>
           <div class="portfolio-preview" data-modal="7" class-modal="interiors">
-            <img src="img/interiors07.jpg" alt="" />
+            <img src="img/preview/interiors/min/interiors8.jpg" alt="" />
+          </div>
+          <div class="portfolio-preview" data-modal="8" class-modal="interiors">
+            <img src="img/preview/interiors/min/interiors9.jpg" alt="" />
           </div>
         </div>
         <h2 class="heading-2 black mb-md mt-md">Анимация</h2>
@@ -334,8 +557,9 @@
       <div class="parallax download__header">
         <div class="block">
           <img
-            src="./img/download__img.jpg"
+            src="./img/sections/min/download.jpg"
             data-speed="1"
+            data-coords="60"
             class="img-parallax main-parallax"
           />
           <h3 data-speed="-2" class="heading-3 text-parallax main-parallax">
@@ -349,8 +573,9 @@
       <div class="parallax partners__header">
         <div class="block">
           <img
-            src="./img/partners__img.jpg"
+            src="./img/sections/min/partners.jpg"
             data-speed="1"
+            data-coords="70"
             class="img-parallax main-parallax"
           />
           <h3 data-speed="-2" class="heading-3 text-parallax main-parallax">
@@ -401,7 +626,7 @@
       <div class="parallax contacts__header">
         <div class="block">
           <img
-            src="./img/contacts__img.jpg"
+            src="./img/sections/min/contacts.jpg"
             data-speed="1"
             class="img-parallax main-parallax"
           />
