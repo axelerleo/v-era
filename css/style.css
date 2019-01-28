@@ -337,7 +337,8 @@ body {
 
 .ru-eng {
   justify-self: end;
-  margin-right: 5rem; }
+  margin-right: 3rem;
+  display: flex; }
 
 .home {
   position: relative;
@@ -651,33 +652,5 @@ body {
   background: #aaa;
   color: #000; }
 
-/* Checkbox Hack */
-#english,
-#rus {
-  opacity: 0;
-  position: absolute; }
-
-label {
-  display: inline-block;
-  margin: 10px 0 10px 0;
-  cursor: pointer; }
-
-/* Default State */
-/* Toggled State */
-#english:checked ~ .english {
-  display: block; }
-
-#english ~ .english {
+.english {
   display: none; }
-
-#english:checked ~ .rus {
-  display: none; }
-
-#rus ~ .rus {
-  display: none; }
-
-#rus:checked ~ .english {
-  display: none; }
-
-#rus:checked ~ .rus {
-  display: block; }

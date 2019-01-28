@@ -271,7 +271,18 @@ $(function() {
   });
 });
 
-$(".lang-btn").on("click", function() {
-  $(".lang-btn").removeClass("border");
-  $(this).addClass("border");
+window.addEventListener("load", function() {
+  $(".lang-btn").on("click", function() {
+    $(".lang-btn").removeClass("border");
+    $(this).addClass("border");
+  });
+
+  $(".eng-btn").click(function() {
+    $(".rus").hide(400);
+    $(".english").show(400);
+  });
+  $(".rus-btn").click(function() {
+    $(".english").hide(400);
+    $(".rus").show(400);
+  });
 });

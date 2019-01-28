@@ -26,32 +26,54 @@
 
     <header class="header">
       <ul class="menu">
-        <li class="menu__item"><a href="#" class="menu__link">Домашняя</a></li>
         <li class="menu__item">
-          <a href="#anchor-about" class="menu__link">О нас</a>
+          <a href="#" class="menu__link"
+            ><span class="rus">Домашняя</span>
+            <span class="english">Home</span></a
+          >
         </li>
         <li class="menu__item">
-          <a href="#anchor-services" class="menu__link">Услуги</a>
+          <a href="#anchor-about" class="menu__link"
+            ><span class="rus">О нас</span>
+            <span class="english">About</span></a
+          >
         </li>
         <li class="menu__item">
-          <a href="#anchor-portfolio" class="menu__link">Портфолио</a>
+          <a href="#anchor-services" class="menu__link"
+            ><span class="rus">Услуги</span>
+            <span class="english">Services</span></a
+          >
         </li>
         <li class="menu__item">
-          <a href="#anchor-download" class="menu__link">Скачать</a>
+          <a href="#anchor-portfolio" class="menu__link"
+            ><span class="rus">Портфолио</span>
+            <span class="english">Portfolio</span></a
+          >
         </li>
         <li class="menu__item">
-          <a href="#anchor-partners" class="menu__link">Партнеры</a>
+          <a href="#anchor-download" class="menu__link"
+            ><span class="rus">Скачать</span>
+            <span class="english">Download</span></a
+          >
         </li>
         <li class="menu__item">
-          <a href="#anchor-contacts" class="menu__link">Контакты</a>
+          <a href="#anchor-partners" class="menu__link"
+            ><span class="rus">Партнеры</span>
+            <span class="english">Partners</span></a
+          >
+        </li>
+        <li class="menu__item">
+          <a href="#anchor-contacts" class="menu__link"
+            ><span class="rus">Контакты</span>
+            <span class="english">Contacts</span></a
+          >
         </li>
       </ul>
       <h2 class="menu__heading heading-2">Visualisation Era</h2>
       <div class="ru-eng">
-        <label for="english" class="lang-btn" id="english-btn">Eng</label>
-        <input type="radio" name="lang" id="english" />
-        <label for="rus" class="lang-btn" id="rus-btn">Rus</label>
-        <input type="radio" name="lang" id="rus" checked />
+        <div class="lang-btn rus-btn border" lang=".rus">Rus</div>
+        <div class="lang-btn eng-btn" lang=".english">Eng</div>
+
       </div>
     </header>
 
@@ -71,7 +93,9 @@
       </div>
       <div class="home__header">
         <h2 class="heading-2">V ERA STUDIO</h2>
-        <h3 class="heading-4 mt-1">Увидев, поверить</h3>
+        <h3 class="heading-4 mt-1"><span class="rus">Увидев, поверить</span>
+            <span class="english">Seeing is believing</span>
+        </h3>
       </div>
       <svg class="home__arrows">
         <path class="a1" d="M0 0 L50 32 L100 0"></path>
@@ -94,8 +118,7 @@
       </div>
 
       <div class="about-container">
-        <img src="img/exteriors/min/about__content.jpg"" class="about__img"
-        />
+        <img src="img/exteriors/min/about__content.jpg"" class="about__img" />
         <div class="about__container-text">
           <p class="about__text black mb-sm">
             Более 6 лет мы занимаемся созданием трехмерного графического
