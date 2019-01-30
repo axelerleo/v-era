@@ -253,7 +253,7 @@ $(".main-parallax").each(function() {
 //anchor links smooth scroll
 
 $(function() {
-  $("a[href*=#]").click(function() {
+  $("a[href^='#']").click(function() {
     if (
       location.pathname.replace(/^\//, "") ==
         this.pathname.replace(/^\//, "") &&
@@ -264,10 +264,33 @@ $(function() {
         ($target.length && $target) || $("[name=" + this.hash.slice(1) + "]");
       if ($target.length) {
         var targetOffset = $target.offset().top;
-        $("html,body").animate({ scrollTop: targetOffset }, 100); //скорость прокрутки
+        $("html,body").animate({ scrollTop: targetOffset }, 700); //скорость прокрутки
         return false;
       }
     }
+  });
+});
+
+$(function() {
+  var $window = $(window); //Window object
+
+  var scrollTime = 1.2; //Scroll time
+  var scrollDistance = 300; //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+
+  $window.on("mousewheel DOMMouseScroll", function(event) {
+    event.preventDefault();
+
+    var delta =
+      event.originalEvent.wheelDelta / 120 || -event.originalEvent.detail / 3;
+    var scrollTop = $window.scrollTop();
+    var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+
+    TweenMax.to($window, scrollTime, {
+      scrollTo: { y: finalScroll, autoKill: true },
+      ease: Power1.easeOut, //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+      autoKill: true,
+      overwrite: 5
+    });
   });
 });
 
@@ -278,11 +301,11 @@ window.addEventListener("load", function() {
   });
 
   $(".eng-btn").click(function() {
-    $(".rus").hide(400);
-    $(".english").show(400);
+    $(".rus").hide(0);
+    $(".english").show(0);
   });
   $(".rus-btn").click(function() {
-    $(".english").hide(400);
-    $(".rus").show(400);
+    $(".english").hide(0);
+    $(".rus").show(0);
   });
 });
