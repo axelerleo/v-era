@@ -13,8 +13,18 @@
   }
   &__youtube {
     //width: calc(33vw - 8rem);
-    height: 45vh;
+    height: 45vh !important;
     margin: 0 5px;
+    display: grid;
+  }
+
+  &__youtube-overlay {
+    height: 315px;
+    width: 100%;
+    // background-color: red;
+    transform: translateY(-100%);
+    opacity: 0.2;
+    margin-top: -5px;
   }
   &__container {
     margin: 13rem;

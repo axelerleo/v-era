@@ -434,10 +434,47 @@
             />
           </div>
         </div>
+        <!-- animation -->
+        <div class="modal__animation" id="modal__animation">
+          <div class="fs-iframe">
+            <iframe class="yt_player_iframe"
+              src="https://www.youtube.com/embed/vhmpMlvv3bc?enablejsapi=1&version=3&playerapiid=ytplayer"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="fs-iframe">
+            <iframe class="yt_player_iframe"
+              src="https://www.youtube.com/embed/inFvVVZv7Ws?enablejsapi=1&version=3&playerapiid=ytplayer"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <!-- interactive -->
+        <div class="modal__interactive" id="modal__interactive">
+          <div class="fs-iframe">
+            <iframe class="yt_player_iframe"
+              src="https://www.youtube.com/embed/PK2OpxeJC_s?enablejsapi=1&version=3&playerapiid=ytplayer"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="fs-iframe">
+            <iframe class="yt_player_iframe"
+              src="https://www.youtube.com/embed/MVrs3FwwznU?enablejsapi=1&version=3&playerapiid=ytplayer"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
       </div>
 
-      <!-- animation -->
-      <!-- interactive -->
       <div class="portfolio__container">
         <h2 class="heading-2 black mb-md mt-md">
           <span class="rus">Экстерьеры</span>
@@ -561,8 +598,17 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <div
+              class="portfolio__youtube-overlay portfolio-preview"
+              data-modal="0"
+              class-modal="animation"
+            ></div>
           </div>
-          <div class="portfolio__youtube">
+          <div
+            class="portfolio__youtube"
+            data-modal="1"
+            class-modal="animation"
+          >
             <iframe
               width="530"
               height="315"
@@ -571,6 +617,11 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <div
+              class="portfolio__youtube-overlay portfolio-preview"
+              data-modal="1"
+              class-modal="animation"
+            ></div>
           </div>
         </div>
         <h2 class="heading-2 black mb-md mt-md">
@@ -588,6 +639,11 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <div
+              class="portfolio__youtube-overlay portfolio-preview"
+              data-modal="0"
+              class-modal="interactive"
+            ></div>
           </div>
 
           <div>
@@ -599,6 +655,11 @@
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
+            <div
+              class="portfolio__youtube-overlay portfolio-preview"
+              data-modal="1"
+              class-modal="interactive"
+            ></div>
           </div>
         </div>
       </div>
@@ -770,9 +831,10 @@
 
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
     <script
-  src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script>
+      src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
     <script src="slick/slick.min.js"></script>
     <script src="js/jQuery.scrollSpeed.js"></script>
     <script src="js/scripts.js"></script>

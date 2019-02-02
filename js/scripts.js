@@ -40,6 +40,24 @@ $("#modal__interiors").slick({
   slidesToScroll: 1
 });
 
+$("#modal__animation").slick({
+  // arrows: false,
+  fade: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
+$("#modal__interactive").slick({
+  // arrows: false,
+  fade: true,
+  infinite: true,
+  speed: 600,
+  slidesToShow: 1,
+  slidesToScroll: 1
+});
+
 $(".main-parallax").each(function() {
   let img = $(this);
   let imgParent = $(this).parent();
@@ -79,7 +97,6 @@ $(".main-parallax").each(function() {
   });
 });
 
-/* begin Up-Down button  */
 (function() {
   "use strict";
 
@@ -176,10 +193,10 @@ $(".main-parallax").each(function() {
       "mouseup",
       function(event) {
         if (flag === 0) {
-          // console.log("click");
           let modalId = this.getAttribute("data-modal");
           let modalClass = this.getAttribute("class-modal");
           let modalContainer = document.querySelector(".modal");
+
           let slickTrack = document.querySelector(
             "#modal__" + modalClass + " .slick-track"
           );
@@ -187,7 +204,7 @@ $(".main-parallax").each(function() {
           slickTrack.setAttribute("style", "opacity: 1; width: 10000px;");
           event.preventDefault();
           let modalSlider = $("#modal__" + modalClass);
-
+          console.log(modalSlider);
           modalContainer.classList.add("active");
           modalSlider[0].classList.add("active");
 
@@ -224,10 +241,20 @@ $(".main-parallax").each(function() {
     let modalContainer = document.querySelector(".modal.active");
     let modalExteriors = $("#modal__exteriors");
     let modalInteriors = $("#modal__interiors");
+    let modalAnimation = $("#modal__animation");
+    let modalInteractive = $("#modal__interactive");
 
     modalContainer.classList.remove("active");
     modalExteriors[0].classList.remove("active");
     modalInteriors[0].classList.remove("active");
+    modalAnimation[0].classList.remove("active");
+    modalInteractive[0].classList.remove("active");
+    $(".yt_player_iframe").each(function() {
+      this.contentWindow.postMessage(
+        '{"event":"command","func":"stopVideo","args":""}',
+        "*"
+      );
+    });
   });
 
   document.body.addEventListener(
@@ -239,10 +266,20 @@ $(".main-parallax").each(function() {
         let modalContainer = document.querySelector(".modal.active");
         let modalExteriors = $("#modal__exteriors");
         let modalInteriors = $("#modal__interiors");
+        let modalAnimation = $("#modal__animation");
+        let modalInteractive = $("#modal__interactive");
 
         modalContainer.classList.remove("active");
         modalExteriors[0].classList.remove("active");
         modalInteriors[0].classList.remove("active");
+        modalAnimation[0].classList.remove("active");
+        modalInteractive[0].classList.remove("active");
+        $(".yt_player_iframe").each(function() {
+          this.contentWindow.postMessage(
+            '{"event":"command","func":"stopVideo","args":""}',
+            "*"
+          );
+        });
       }
     },
     false

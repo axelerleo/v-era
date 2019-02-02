@@ -96,7 +96,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s; }
-  .modal__exteriors, .modal__interiors {
+  .modal__exteriors, .modal__interiors, .modal__animation, .modal__interactive {
     width: 90vw;
     height: 90vh; }
   .modal__img {
@@ -116,7 +116,9 @@ body {
       fill: #ddd; }
 
 #modal__exteriors,
-#modal__interiors {
+#modal__interiors,
+#modal__animation,
+#modal__interactive {
   visibility: hidden;
   width: 90vw;
   height: 90vh;
@@ -131,8 +133,15 @@ body {
   transition: all 0.5s; }
 
 #modal__exteriors.active,
-#modal__interiors.active {
+#modal__interiors.active,
+#modal__animation.active,
+#modal__interactive.active {
   visibility: visible; }
+
+.fs-iframe iframe {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover; }
 
 .heading-1, .heading-2, .heading-3, .heading-4, .heading-5 {
   font-family: "Josefin Sans", sans-serif;
@@ -547,8 +556,15 @@ body {
     height: 45vh;
     margin: 0 5px; }
   .portfolio__youtube {
-    height: 45vh;
-    margin: 0 5px; }
+    height: 45vh !important;
+    margin: 0 5px;
+    display: grid; }
+  .portfolio__youtube-overlay {
+    height: 315px;
+    width: 100%;
+    transform: translateY(-100%);
+    opacity: 0.2;
+    margin-top: -5px; }
   .portfolio__container {
     margin: 13rem; }
 
