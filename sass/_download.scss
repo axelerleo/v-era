@@ -4,4 +4,12 @@
   &__header {
     height: 40vh;
   }
+  &__icon {
+    display: flex;
+    height: 25rem;
+    margin: 15rem auto;
+  }
+  &__img {
+    margin: 0 auto;
+  }
 }

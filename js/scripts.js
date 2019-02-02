@@ -227,6 +227,7 @@ $(".main-parallax").each(function() {
 
     slickTrack.setAttribute("style", "opacity: 1; width: 10000px;");
     event.preventDefault();
+
     let modalSlider = $("#modal__" + modalClass);
 
     modalContainer.classList.add("active");
@@ -289,15 +290,19 @@ $(".main-parallax").each(function() {
 //anchor links smooth scroll
 
 $(function() {
-  $("a[href^='#']").click(function() {
+  $("a[href^='#'], div[href^='#']").click(function() {
+    let link = this;
+    if (this.tagName == "DIV") {
+      link = this.querySelector("a");
+    }
     if (
       location.pathname.replace(/^\//, "") ==
-        this.pathname.replace(/^\//, "") &&
-      location.hostname == this.hostname
+        link.pathname.replace(/^\//, "") &&
+      location.hostname == link.hostname
     ) {
-      var $target = $(this.hash);
+      var $target = $(link.hash);
       $target =
-        ($target.length && $target) || $("[name=" + this.hash.slice(1) + "]");
+        ($target.length && $target) || $("[name=" + link.hash.slice(1) + "]");
       if ($target.length) {
         var targetOffset = $target.offset().top;
         $("html,body").animate({ scrollTop: targetOffset }, 700); //скорость прокрутки
@@ -336,3 +341,11 @@ $(".slick-arrow").on("click", function() {
     );
   });
 });
+
+// $(".img-group__mask").click(function() {
+//   window.location = $(this)
+//     .find("a")
+//     .attr("href");
+//   return false;
+//   //window.location = $(this).data("location");
+// });
