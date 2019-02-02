@@ -556,7 +556,7 @@ body {
     height: 45vh;
     margin: 0 5px; }
   .portfolio__youtube {
-    height: 45vh !important;
+    height: 315px !important;
     margin: 0 5px;
     display: grid; }
   .portfolio__youtube-overlay {
