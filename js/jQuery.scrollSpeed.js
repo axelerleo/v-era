@@ -18,55 +18,59 @@
     if (window.navigator.msPointerEnabled) return false;
 
     $window
-      .on("mousewheel DOMMouseScroll", function(e) {
-        var deltaY = e.originalEvent.wheelDeltaY,
-          detail = e.originalEvent.detail;
-        scrollY = $document.height() > $window.height();
-        scrollX = $document.width() > $window.width();
-        scroll = true;
+      .on(
+        "mousewheel DOMMouseScroll",
+        function(e) {
+          var deltaY = e.originalEvent.wheelDeltaY,
+            detail = e.originalEvent.detail;
+          scrollY = $document.height() > $window.height();
+          scrollX = $document.width() > $window.width();
+          scroll = true;
 
-        if (scrollY) {
-          view = $window.height();
+          if (scrollY) {
+            view = $window.height();
 
-          if (deltaY < 0 || detail > 0)
-            root = root + view >= $document.height() ? root : (root += step);
+            if (deltaY < 0 || detail > 0)
+              root = root + view >= $document.height() ? root : (root += step);
 
-          if (deltaY > 0 || detail < 0) root = root <= 0 ? 0 : (root -= step);
+            if (deltaY > 0 || detail < 0) root = root <= 0 ? 0 : (root -= step);
 
-          $body.stop().animate(
-            {
-              scrollTop: root
-            },
-            speed,
-            option,
-            function() {
-              scroll = false;
-            }
-          );
-        }
+            $body.stop().animate(
+              {
+                scrollTop: root
+              },
+              speed,
+              option,
+              function() {
+                scroll = false;
+              }
+            );
+          }
 
-        if (scrollX) {
-          view = $window.width();
+          if (scrollX) {
+            view = $window.width();
 
-          if (deltaY < 0 || detail > 0)
-            root = root + view >= $document.width() ? root : (root += step);
+            if (deltaY < 0 || detail > 0)
+              root = root + view >= $document.width() ? root : (root += step);
 
-          if (deltaY > 0 || detail < 0) root = root <= 0 ? 0 : (root -= step);
+            if (deltaY > 0 || detail < 0) root = root <= 0 ? 0 : (root -= step);
 
-          $body.stop().animate(
-            {
-              scrollLeft: root
-            },
-            speed,
-            option,
-            function() {
-              scroll = false;
-            }
-          );
-        }
+            $body.stop().animate(
+              {
+                scrollLeft: root
+              },
+              speed,
+              option,
+              function() {
+                scroll = false;
+              }
+            );
+          }
 
-        return false;
-      })
+          return false;
+        },
+        { passive: false }
+      )
       .on("scroll", function() {
         if (scrollY && !scroll) root = $window.scrollTop();
         if (scrollX && !scroll) root = $window.scrollLeft();
