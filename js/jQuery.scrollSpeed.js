@@ -25,6 +25,8 @@
         scrollX = $document.width() > $window.width();
         scroll = true;
 
+        e.passive = false;
+
         if (scrollY) {
           view = $window.height();
 
