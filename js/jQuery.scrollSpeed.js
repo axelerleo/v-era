@@ -18,7 +18,7 @@
     if (window.navigator.msPointerEnabled) return false;
 
     $window
-      .on("mousewheel DOMMouseScroll", { passive: false }, function(e) {
+      .on("mousewheel DOMMouseScroll", "", { passive: false }, function(e) {
         var deltaY = e.originalEvent.wheelDeltaY,
           detail = e.originalEvent.detail;
         scrollY = $document.height() > $window.height();
