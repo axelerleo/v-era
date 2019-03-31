@@ -87,14 +87,17 @@ $(".main-parallax").each(function() {
       transform: "translate(-50%, -" + imgPercent + "%)"
     });
   }
-  $(document).on({
-    scroll: function() {
-      parallaxImg();
-    },
-    ready: function() {
-      parallaxImg();
-    }
+  document.addEventListener("scroll", function() {
+    parallaxImg();
   });
+  // $(document).on({
+  //   scroll: function() {
+  //     parallaxImg();
+  //   },
+  //   ready: function() {
+  //     parallaxImg();
+  //   }
+  // });
 });
 
 (function() {
@@ -172,7 +175,6 @@ $(".main-parallax").each(function() {
 
   for (index = 0; index < portfolioPreviewImages.length; index++) {
     image = portfolioPreviewImages[index];
-    // image.addEventListener("click", clickHandler);
 
     let flag = 0;
     image.addEventListener(
@@ -210,7 +212,6 @@ $(".main-parallax").each(function() {
 
           modalSlider.slick("slickGoTo", modalId, true);
         } else if (flag === 1) {
-          // console.log("drag");
         }
       },
       false
@@ -314,7 +315,7 @@ $(function() {
 
 $(function() {
   // Custom Easing
-  //jQuery.scrollSpeed(200, 1200, "easeOutSine");
+  jQuery.scrollSpeed(200, 1200, "easeOutSine");
 });
 
 window.addEventListener("load", function() {
@@ -341,11 +342,3 @@ $(".slick-arrow").on("click", function() {
     );
   });
 });
-
-// $(".img-group__mask").click(function() {
-//   window.location = $(this)
-//     .find("a")
-//     .attr("href");
-//   return false;
-//   //window.location = $(this).data("location");
-// });
