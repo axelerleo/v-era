@@ -319,7 +319,7 @@ $(function() {
 
 $(function() {
   // Custom Easing
-  //jQuery.scrollSpeed(200, 1200, "easeOutSine");
+  jQuery.scrollSpeed(200, 1200, "easeOutSine");
 });
 
 window.addEventListener("load", function() {
