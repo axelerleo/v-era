@@ -7,17 +7,18 @@
   jQuery.scrollSpeed = function(step, speed, easing) {
     var $document = $(document),
       $window = $(window),
-      $body = $("html, body"),
-      option = easing || "default",
-      root = 0,
-      scroll = false,
+      $container = $(".container");
+    ($body = $("html, body")),
+      (option = easing || "default"),
+      (root = 0),
+      (scroll = false),
       scrollY,
       scrollX,
-      view;
+      (view = $window.height());
 
     if (window.navigator.msPointerEnabled) return false;
 
-    $window
+    $container
       .on("mousewheel DOMMouseScroll", "", { passive: false }, function(e) {
         var deltaY = e.originalEvent.wheelDeltaY,
           detail = e.originalEvent.detail;

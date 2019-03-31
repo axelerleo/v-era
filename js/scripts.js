@@ -87,9 +87,13 @@ $(".main-parallax").each(function() {
       transform: "translate(-50%, -" + imgPercent + "%)"
     });
   }
-  document.addEventListener("scroll", function() {
-    parallaxImg();
-  });
+  document.addEventListener(
+    "scroll",
+    function() {
+      parallaxImg();
+    },
+    { passive: false }
+  );
   // $(document).on({
   //   scroll: function() {
   //     parallaxImg();
