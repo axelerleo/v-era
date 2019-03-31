@@ -170,7 +170,7 @@ $(".main-parallax").each(function() {
     }
   }
 
-  window.addEventListener("scroll", trackScroll);
+  window.addEventListener("scroll", trackScroll, { passive: false });
   upDownBtn.addEventListener("click", backToTop);
 
   let portfolioPreviewImages = document.querySelectorAll(".portfolio-preview"),
@@ -319,7 +319,7 @@ $(function() {
 
 $(function() {
   // Custom Easing
-  jQuery.scrollSpeed(200, 1200, "easeOutSine");
+  //jQuery.scrollSpeed(200, 1200, "easeOutSine");
 });
 
 window.addEventListener("load", function() {
